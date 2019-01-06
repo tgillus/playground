@@ -1,6 +1,6 @@
 const Json2csvParser = require('json2csv').Parser;
 
-const fields = ['foo', 'bar', 'baz.qux'];
+const fields = ['foo', 'bar', 'baz.qux', 'baz.quux', 'baz.corge.grault'];
 const opts = { fields };
 
 const data = [
@@ -8,14 +8,22 @@ const data = [
     foo: 'one',
     bar: 'two',
     baz: {
-      qux: 'three'
+      qux: 'three',
+      quux: 'four',
+      corge: {
+        grault: 5
+      }
     }
   },
   {
-    foo: 'four',
-    bar: 'five',
+    foo: 'six',
+    bar: 'seven',
     baz: {
-      qux: 'six'
+      qux: 'eight',
+      quux: 'nine',
+      corge: {
+        grault: 10
+      }
     }
   }
 ];
